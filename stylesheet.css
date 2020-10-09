@@ -1,0 +1,461 @@
+* 
+{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+        background-image: url(pics/cofffecupheader.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        background-attachment: fixed;
+        background-size: cover;
+        min-height: 700px;
+        position: relative;
+        }
+
+.headTitle{
+    padding: 70px;
+    color: #302010;
+    text-align: center;
+    font-size: 5rem;
+    letter-spacing: 2px;
+}
+
+/*Menu bar*/
+.navbar{
+    position: sticky;
+    top: 0;
+    background-color:#1b1209;
+    padding: 15px;
+ font-size: 1.5rem; 
+ min-height: 60px;
+ text-align: center;
+}
+
+/* Shopping Cart icon */
+.cart ion-icon{
+    vertical-align: bottom;
+    padding: 3px;
+}
+
+/*Menu links*/
+.navbar a{
+   padding: 10px;
+    color: white; 
+    text-decoration: none;
+    list-style-type: none;
+}
+.navbar a:hover{ 
+    color: white; 
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 769px)
+{
+    .menu{
+        display: none;
+    }
+  .hamburger{
+    display: none;
+  }
+}
+/* Menu: The Dropdown Button */
+
+@media screen and (max-width: 768px)
+{
+    .headTitle{
+        font-size: 3rem;
+    }
+    .menu{
+        color: white;
+        display: inline-block;
+    }
+
+.hamburger {
+    
+    cursor: pointer;
+    background: #1b1209;
+    border: none; 
+   }
+
+  .line 
+{
+    width: 25px; 
+    height: 1.5px; 
+    background: white;
+    margin: 5px;
+    display: block;
+}
+.navbar a{
+    color: white; 
+    text-decoration: none;
+    list-style-type: none;
+}
+.navbar a:hover{ 
+    color: white; 
+    cursor: pointer;
+    text-decoration: underline;
+}
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Gömd genom display none) */
+  .dropdown-content {
+    text-align: left; 
+    display: none;
+    position: absolute;
+    background-color: #1b1209;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* länkar inne i menyn */
+  .dropdown-content a {
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Ändrar färg på menylänkarna när man hovrar över dem */
+  .dropdown-content a:hover {background-color: #53381c;}
+  
+  /* Visa menyn när man hovrar över meny */
+  .dropdown:hover .dropdown-content {
+    display: block;
+
+  }
+  
+  /* Ändrar bakgrunden på drop down menyn */
+  .dropdown:hover .dropbtn {
+    background-color: #53381c;
+  }
+}
+
+/*För de webbläsare som inte stödjer grid, en s.k Fallback layout*/
+main 
+{
+    max-width: 500px;
+    margin: 0 auto; 
+    padding: 1rem;
+}
+article{
+    margin: 1rem, 0;
+}
+
+/* Grid code starts here*/
+@supports (display: grid){
+    main{
+       max-width: 10000px;
+        margin: 0; 
+    }
+    
+    .deals /*Här finns hela koden för Grid*/
+    {
+    
+        font-family: times new roman;
+        font-size: 80%; 
+    }
+    
+    .deals
+    {
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 1rem; 
+    }
+}
+
+.sale-item
+{
+    display: flex;
+    flex-flow: column;
+    border: 1px solid black; 
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sale-item:hover{
+    cursor: pointer;
+}
+
+.sale-item img 
+{
+    order: -1;
+    align-self: center; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sale-item > h1{
+    margin: 1rem 1rem 0;
+}
+
+.sale-item > p 
+{
+    font-size: 1rem;
+    margin: 0.25em 1rem 1rem; 
+}
+
+.sale-item > ul 
+{
+    font-size: 1rem;
+    margin: 0 0 1rem; 
+}
+
+/*Experiment nedan*/
+.add-cart{
+    align-self: center; 
+    display: block;
+    width: 50%;
+    transition: all 0.4s ease-in-out; 
+   opacity: 0;
+    cursor: pointer; 
+   align-items: center;
+    margin-top: auto;
+    background: rgb(110, 83, 48); 
+    color: white;
+    padding: 0.5rem;
+    border: none; 
+    border-radius: 1rem;
+    font-size: 1.0rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sale-item:hover .cart1,
+.sale-item:hover .cart2,
+.sale-item:hover .cart3,
+.sale-item:hover .cart4,
+.sale-item:hover .cart5,
+.sale-item:hover .cart6
+{
+    display: block;
+    opacity: 1;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+} 
+
+/*här slutar experimentet*/
+
+.sale-item > button{
+    background: rgb(110, 83, 48); 
+    color: white;
+    padding: 0.5rem;
+    border: none; 
+    border-radius: 1rem;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.sale-item > button:hover{
+   background: rgb(180, 151, 114); 
+   cursor: pointer;
+}
+
+/*Footer section on all pages*/
+footer {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color:#1b1209;
+    font-size: 0.7rem;
+}
+
+.footerTitle{
+    padding: 10px;
+}
+
+form input[type="text"],[type="email"] 
+{
+  margin: 3px;
+  opacity: 0.8;
+}
+
+form input[type="text"]:hover,[type="email"]:hover{
+opacity: 1;}
+
+form input[type="text"]:focus,[type="email"]:focus{
+outline: none;
+}
+
+.submitButton{
+margin: 10px;
+padding: 5px;
+outline: none;
+border: none;
+opacity: 0.7;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.submitButton:hover{
+margin: 10px;
+cursor: pointer;
+text-decoration: underline;
+}
+
+.submitButton:focus
+{
+   color: green;
+   border: 1px solid green;
+}
+
+
+/* Här börjar all CSS specifikt för Shopping Cart sidan*/ 
+
+.ShoppingCartHeader{
+        padding: 70px;
+        color: #302010;
+        text-align: center;
+        font-size: 5rem;
+        letter-spacing: 2px;
+    }
+
+
+.container-shoppingcart{
+    margin: 30px;
+}
+
+.container-shoppingcart p{
+    display: inline-block;
+    width: 24%;
+}
+
+ 
+  .itemsShoppingCart { 
+      list-style-type: none;
+      padding: 30px;
+    
+  }
+
+  .li-items{
+      color: red;
+      font-size: 1.5rem;
+
+  }
+  
+  .divideLine{
+      margin-top: 30px;
+  }
+
+
+  .delete
+  {
+      font-size: 12px;
+      color: white;
+      border-radius: 4px;
+      padding: 7px; 
+      float: right;
+      background-image: linear-gradient(rgb(105, 73, 24), rgb(180, 151, 114));
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .delete:hover{
+        background: rgb(180, 151, 114); 
+        cursor: pointer;
+     }
+  
+     .total-amount{
+         margin-top: 40px;
+         background-color: green;
+         color: black;
+         padding: 30px;
+         font-size: 1.5rem;
+     }
+
+
+     /* CSS för kontakt-sidan */
+
+ /*Här börjar koden för Kontakt formuläret*/ 
+.contactForm
+{
+    position: relative;
+    z-index: -1;
+    text-align: center;
+border: none;
+  padding: 20px;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+/*Gör att input-rutorna är mjuka i kanterna*/
+form input[type="text"], input[type="tel"], input[type="email"]
+{
+padding: 7px 30px 7px 2px;
+border-radius: 4px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#bio{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  resize: none;}
+
+
+form input:focus
+  {
+    border: 3px solid black; 
+    outline: none;
+  }
+
+.bio:focus
+  {
+    border: 3px solid black; 
+    outline: none;
+  }
+
+/*Om man fyller i korrekt uppgifter i formuläret blir rutorna gröna*/
+form input#name:valid:not(:placeholder-shown){border: 2px solid rgb(33, 141, 33);}
+form input#contactEmail:valid:not(:placeholder-shown){border: 2px solid rgb(33, 141, 33);}
+form input#phone:valid:not(:placeholder-shown){border: 2px solid rgb(33, 141, 33);}
+
+
+form input[type="text"]:focus, input[type="email"]:focus
+  {
+    border: 3px solid black;
+    outline: none; 
+  }
+
+/*Obligatoriska fält-texten*/
+#required
+{
+  padding: 10px;
+  font-size: 10px;
+  }
+
+  /*textrutan i kontakt forumläret */ 
+.bio 
+{
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+.contactButton
+{
+    font-size: 14px;
+    color: black;
+    Padding: 7px 12px;
+    text-decoration: none;
+    background-image: linear-gradient(rgb(105, 73, 24), rgb(180, 151, 114));
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 1px solid rgba(255, 255, 255, 0.541); 
+    border-top: none;
+    cursor: pointer; 
+  }
+
+  .contactButton:focus
+  {
+     text-decoration: underline;
+    border-radius: 36px;
+    border: 2px solid white;
+    outline: none;
+  }
+  
+  .contactButton:hover
+  {
+    Padding: 7px 12px;
+    color: rgb(22, 21, 21);
+    text-decoration: underline;
+  }

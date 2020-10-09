@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Contact us</title>
+</head>
+<body>
+
+<header>
+    <h1 class="headTitle">My Little Sunshine Coffee Shop</h1>
+</header>
+
+<div class="navbar">
+ <div class="dropdown">
+     <p class="menu">Menu</p>
+    <button class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        </button>
+        <nav>
+
+        <div class="dropdown-content">
+        <a href="index.html">Shop</a>
+        <a href="">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="shoppingcart.html" class="cart"><ion-icon name="cart-outline" size="small"></ion-icon>Cart(<span>0</span>)</a>
+    </div> </div>
+</nav></div>
+
+
+    <form class="contactForm"> <!-- "Form är containern för alla input-rutor-->
+        <label for="name">Namn *</label>
+        <br>
+        <input type="text" aria-labelledby="name" id="name" placeholder="namn" required minlength="2">
+        <br><br>
+        <label for="contactEmail">E-post *</label><br>
+        <input type="email" aria-labelledby="contactEmail" class="email" id="contactEmail" placeholder="e-post" required>
+        <br><br>
+        <label for="phone">Mobilnummer</label><br>
+        <input type="tel" aria-labelledby="phone" id="phone" name="telefon" placeholder="070"  pattern="[0-9]{10}" minlength="10">
+                                 
+    <p id="required">*obligatoriska fält</p>
+  
+<!-- en större boxruta att skriva text i-->
+<label for="bio"></label>
+<textarea name="bio" aria-labelledby="bio" class="bio" id="bio" maxlength="100" cols="40" rows="10" placeholder="Skriv..." required></textarea>      
+<br><br>
+    <span class="reply"></span><br>
+    <br>
+    <button type="submit" class="contactButton" aria-label="Send">Skicka</button>
+              
+</form> 
+
+
+
+<footer>
+    <h2 class="footerTitle">Få vårt nyhetsbrev!</h2>
+    <form>
+            <label for="prenumerationName"></label>
+            <input type="text" aria-labelledby="prenumerationName" class="name" id="prenumerationName" placeholder="Namn">
+           
+            <label for="prenumerationEmail"></label>
+            <input type="email" aria-labelledby="prenumerationEmail" class="email" id="prenumerationEmail" placeholder="Ange din epostadress" required><br>
+    </form>
+           
+            <button type="submit" class="submitButton" aria-label="subscribe">Spara</button>
+            <span class="thankYou"></span>
+        
+    <p>Copyright 2020 Emma Lilja</p>
+</footer>
+</body>
+</html>

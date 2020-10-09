@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
+    <script src="shoppingcart.js" defer></script>
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Shoppingcart</title>
+</head>
+<body>
+<header>
+    <h1 class="ShoppingCartHeader">My Little Sunshine Coffee Shop</h1>
+</header>
+
+<div class="navbar">
+    <div class="dropdown">
+        <p class="menu">Menu</p>
+       <button class="hamburger">
+           <span class="line"></span>
+           <span class="line"></span>
+           <span class="line"></span>
+           </button>
+           <nav>
+   
+           <div class="dropdown-content">
+           <a href="index.html">Shop</a>
+           <a href="">About</a>
+           <a href="contact.html">Contact</a>
+           <a href="shoppingcart.html" class="cart"><ion-icon name="cart-outline" size="small"></ion-icon>Cart(<span>0</span>)</a>
+       </div> </div>
+   </nav></div>
+
+
+    <div class="container-shoppingcart">
+        <p>PRODUCT</p>
+        <p>PRICE</p>
+        <p>QUANTITY</p>
+        <p>TOTAL</p>
+        <hr>
+        <ul class="itemsShoppingCart">
+            <li class="li-items">
+                <span class="delete">Delete</span>
+                <span class="item">Arabic Coffee</span>
+                <hr class="divideLine">
+            </li>
+        </ul>
+        </div>
+
+<div class="total-amount">
+    <p> Your total amount is: </p>
+</div>
+
+<footer>
+    <h2 class="footerTitle">Få vårt nyhetsbrev!</h2>
+    <form>
+            <label for="prenumerationName"></label>
+            <input type="text" aria-labelledby="prenumerationName" class="name" id="prenumerationName" placeholder="Namn">
+           
+            <label for="prenumerationEmail"></label>
+            <input type="email" aria-labelledby="prenumerationEmail" class="email" id="prenumerationEmail" placeholder="Ange din epostadress" required><br>
+    </form>
+           
+            <button type="submit" class="submitButton" aria-label="subscribe">Spara</button>
+            <span class="thankYou"></span>
+        
+    <p>Copyright 2020 Emma Lilja</p>
+</footer>
+
+
+
+
+</body>
+</html>

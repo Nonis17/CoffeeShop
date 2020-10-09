@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Shop</title>
+</head>
+<body>
+    <header>
+        <h1 class="headTitle">My Little Sunshine Coffee Shop</h1>
+    </header>
+
+<div class="navbar">
+     <div class="dropdown">
+         <p class="menu">Menu</p>
+        <button class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            </button>
+            <nav>
+    
+            <div class="dropdown-content">
+            <a href="index.html">Shop</a>
+            <a href="">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="shoppingcart.html" class="cart"><ion-icon name="cart-outline" size="small"></ion-icon>Cart(<span>0</span>)</a>
+        </div> </div>
+    </nav></div>
+
+
+
+    <main class="deals"> <!--Grid conteiner-->
+
+        <article class="sale-item"> <!--Grid barn. Även en flexbox-conteiner-->
+            <h1>Arabic Coffee 500g</h1> <!--Flexbox items/barn-->
+            <p>For the intense flavour lover</p>
+            <p>89kr/hg</p>
+            <ul>
+                <li>Whole Beans</li>
+                <li>Organic</li>
+                <li>Dark-roasted coffee</li>
+            </ul>
+            <img src="pics/arabiccoffee.jpg" width="250" height="200" alt="arabic coffee beans">
+            <button class="add-cart cart1">Add to cart</button>
+        </article>
+    
+        <article class="sale-item"> <!--Grid item/barn-->
+            <h1>Peru Coffee 500g</h1> <!--Flexbox items/barn-->
+            <p>This is the best soft coffee</p>
+            <p>69kr</p>
+            <ul>
+                <li>Whole beans</li>
+                <li>Cocoa and berries flavour</li>
+                <li>Light-roasted coffee</li>
+            </ul>
+            <img src="pics/peru.jpg" width="250" height="200" alt="peru coffee beans">
+            <button class="add-cart cart2">Add to cart</button>
+        </article>
+    
+        <article class="sale-item"><!--Grid item/barn-->
+            <h1>African Coffee 500g</h1> <!--Flexbox items/barn-->
+            <p>The roots of coffee</p>
+            <p>79kr</p>
+            <ul>
+                <li>Whole Beans</li>
+                <li>Medium-roasted coffee</li>
+                <li>Fruity aromatic</li>
+            </ul>
+            <img src="pics/africanbeans.jpg" width="250" height="200" alt="african bean coffee">
+            <button class="add-cart cart3">Add to cart</button>
+        </article>
+    
+        <article class="sale-item"> <!--Grid item/barn-->
+            <h1>Ethiopian Coffee 500g</h1> <!--Flexbox items/barn-->
+            <p>This is the best quality coffee</p>
+            <p>99kr</p>
+            <ul>
+                <li>Exclusive</li>
+                <li>Whole Beans</li>
+                <li>Organic</li>
+            </ul>
+            <img src="pics/ethiopian.jpg" width="250" height="200" alt="ethiopian coffee beans">
+            <button class="add-cart cart4">Add to cart</button>
+        </article>
+    
+        <article class="sale-item"> <!--Grid item/barn-->
+            <h1>Balinesean Coffee 500g</h1> <!--Flexbox items/barn-->
+            <p>Unprocessed raw from the djungle</p>
+            <p>59kr</p>
+            <ul>
+                <li>Whole beans</li>
+                <li>Fruity and smooth flavour</li>
+                <li>Organic</li>
+            </ul>
+            <img src="pics/balicoffee.jpg" width="250" height="200" alt="Bali coffee beans">
+            <button class="add-cart cart5">Add to cart</button>
+        </article>
+    
+        <article class="sale-item"> <!--Grid item/barn-->
+            <h1>Columbian Coffee 500g</h1> <!--Flexbox items/barn-->
+            <p>Deep flavour</p>
+            <p>79kr</p>
+            <ul>
+                <li>Dark roasted</li>
+                <li>Eco</li>
+                <li>Nutty and spicy</li>
+            </ul>
+            <img src="pics/Columbia.jpg" width="250" height="200" alt="columbia coffee beans">
+            <button class="add-cart cart6">Add to cart</button>
+        </article>
+    </main>
+
+    
+    <footer>
+        <h2 class="footerTitle">Få vårt nyhetsbrev!</h2>
+        <form>
+                <label for="prenumerationName"></label>
+                <input type="text" aria-labelledby="prenumerationName" class="name" id="prenumerationName" placeholder="Namn">
+               
+                <label for="prenumerationEmail"></label>
+                <input type="email" aria-labelledby="prenumerationEmail" class="email" id="prenumerationEmail" placeholder="Ange din epostadress" required><br>
+        </form>
+               
+                <button type="submit" class="submitButton" aria-label="subscribe">Spara</button>
+                <span class="thankYou"></span>
+            
+        <p>Copyright 2020 Emma Lilja</p>
+    </footer>
+
+
+
+</body>
+</html>
