@@ -6,12 +6,13 @@
     <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
     <script src="shoppingcart.js" defer></script>
+    <script src="index.js" defer></script>
     <link rel="stylesheet" href="stylesheet.css">
     <title>Shoppingcart</title>
 </head>
 <body>
 <header>
-    <h1 class="ShoppingCartHeader">My Little Sunshine Coffee Shop</h1>
+    <h1 class="ShoppingCartPageHeader">My Little Sunshine Coffee Shop</h1>
 </header>
 
 <div class="navbar">
@@ -33,24 +34,18 @@
    </nav></div>
 
 
-    <div class="container-shoppingcart">
-        <p>PRODUCT</p>
-        <p>PRICE</p>
-        <p>QUANTITY</p>
-        <p>TOTAL</p>
-        <hr>
-        <ul class="itemsShoppingCart">
-            <li class="li-items">
-                <span class="delete">Delete</span>
-                <span class="item">Arabic Coffee</span>
-                <hr class="divideLine">
-            </li>
-        </ul>
-        </div>
+    <div class="container-checkout">
+        <div class="shoppingcart-header">
+        <h5 class="product-title">PRODUCT</h5>
+        <h5 class="price-title">PRICE</h5>
+        <h5 class="quantity-title">QUANTITY</h5>
+        <h5 class="total-title">TOTAL</h5>
+    </div>
+        <!--All items in cart will show up in this div-->
+       <div class="products"></div>
+       
+    </div>
 
-<div class="total-amount">
-    <p> Your total amount is: </p>
-</div>
 
 <footer>
     <h2 class="footerTitle">Få vårt nyhetsbrev!</h2>
@@ -67,9 +62,5 @@
         
     <p>Copyright 2020 Emma Lilja</p>
 </footer>
-
-
-
-
 </body>
 </html>

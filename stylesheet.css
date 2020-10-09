@@ -195,9 +195,7 @@ article{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.sale-item > h1{
-    margin: 1rem 1rem 0;
-}
+.sale-item > h1{margin: 1rem 1rem 0;}
 
 .sale-item > p 
 {
@@ -306,70 +304,84 @@ text-decoration: underline;
    border: 1px solid green;
 }
 
+/* ----- Här börjar all CSS specifikt för Shopping Cart sidan -----*/ 
 
-/* Här börjar all CSS specifikt för Shopping Cart sidan*/ 
+.ShoppingCartPageHeader{
+    padding: 70px;
+    color: #302010;
+    text-align: center;
+    font-size: 5rem;
+    letter-spacing: 2px;
+}
 
-.ShoppingCartHeader{
-        padding: 70px;
-        color: #302010;
-        text-align: center;
-        font-size: 5rem;
-        letter-spacing: 2px;
+.container-checkout{
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
     }
 
-
-.container-shoppingcart{
-    margin: 30px;
+.shoppingcart-header{
+width: 100%;
+max-width: 650px;
+display: flex;
+justify-content: flex-start;
+border-bottom: 4px solid black;
+margin: 0 auto;
 }
 
-.container-shoppingcart p{
-    display: inline-block;
-    width: 24%;
+.product-title{
+width: 45%;
 }
 
- 
-  .itemsShoppingCart { 
-      list-style-type: none;
-      padding: 30px;
-    
-  }
+.price-title{
+width: 15%;
+display: flex;
+align-items: center; 
 
-  .li-items{
-      color: red;
-      font-size: 1.5rem;
+}
 
-  }
-  
-  .divideLine{
-      margin-top: 30px;
-  }
+.quantity-title{
+width: 30%;
+display: flex;
+align-items: center; 
 
+}
 
-  .delete
-  {
-      font-size: 12px;
-      color: white;
-      border-radius: 4px;
-      padding: 7px; 
-      float: right;
-      background-image: linear-gradient(rgb(105, 73, 24), rgb(180, 151, 114));
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  .delete:hover{
-        background: rgb(180, 151, 114); 
-        cursor: pointer;
-     }
-  
-     .total-amount{
-         margin-top: 40px;
-         background-color: green;
-         color: black;
-         padding: 30px;
-         font-size: 1.5rem;
-     }
+.total-title{
+width: 10%;
+display: flex;
+align-items: center; 
+}
+
+.products{
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.products ion-icon  {
+    font-size: 20px;
+    color: #1b1209; 
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: poiner; 
+}
 
 
-     /* CSS för kontakt-sidan */
+.basketTotalContainer{
+    display: flex;
+    justify-content: flex-end; 
+    width: 100%;
+    padding: 10px 0;
+}
+
+
+/* ------ CSS för kontakt-sidan ------ */
 
  /*Här börjar koden för Kontakt formuläret*/ 
 .contactForm

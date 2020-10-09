@@ -1,4 +1,4 @@
-var cart = ["Arabic Coffee", "Peru Coffee"];
+ /*var cart = ["Arabic Coffee", "Peru Coffee"];
 
 //We create new html elements with this 
 const cartList = document.querySelector('.itemsShoppingCart');
@@ -27,7 +27,7 @@ cartList.appendChild(li)
 }
 
 //delete items in shopping cart
-const list = document.querySelector('.container-shoppingcart ul'); 
+const list = document.querySelector('.container-shoppingcart' ul); 
 
 list.addEventListener('click', function(e)
 {
@@ -37,3 +37,4 @@ list.addEventListener('click', function(e)
 
     }
 });
+*/

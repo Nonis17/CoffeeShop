@@ -5,7 +5,7 @@ let products = [
 
     {
         name: "Arabic Coffee",
-        tag: "Arabic",
+        tag: "arabiccoffee",
         price: 89,
         inCart: 0
     },
@@ -17,19 +17,19 @@ let products = [
     },
     {
         name: "Africa Coffee",
-        tag: "Africa",
+        tag: "africanbeans",
         price: 79,
         inCart: 0
     },
     {
         name: "Ethiopia Coffee",
-        tag: "Ethiopia",
+        tag: "ethiopian",
         price: 99,
         inCart: 0
     },
     {
         name: "Bali Coffee",
-        tag: "Bali",
+        tag: "balicoffee",
         price: 59,
         inCart: 0
     },
@@ -44,6 +44,9 @@ let products = [
 for (let i = 0; i < carts.length; i++){
     carts[i].addEventListener('click', () => {
 cartNumbers(products[i]);
+
+//Calls function to calculate total cost of products
+totalCost(products[i]);
     })
 };
 
@@ -100,13 +103,73 @@ else {
     }
 }
 
-
 //Convert JavaScript object to JSON object
 localStorage.setItem("productsInCart", JSON.stringify(cartItems));
 }
 
+//Function that calculates total cost of items in cart: 
+function totalCost(product){
+let cartCost = localStorage.getItem("totalCost");
 
+//To check if there is anything in the cart: 
+if(cartCost != null){
+//Converts a parse string to a number:
+cartCost = parseInt(cartCost); 
+localStorage.setItem("totalCost", cartCost + product.price);
+}else{
+    localStorage.setItem("totalCost", product.price);
+}
+}
 
+/* ------- Here starts Java Script for Shopping Cart page ------*/
+
+function displayCart(){
+//Gets items that is in LocalStorage:
+ let cartItems = localStorage.getItem("productsInCart");
+ //Converts JSON string to JS numbers:
+ cartItems = JSON.parse(cartItems); 
+
+ //IF we have something in local storage(cartItems) and if we are on the right page (productContainer):
+let productContainer = document.querySelector(".products");
+let cartCost = localStorage.getItem("totalCost");
+
+if (cartItems && productContainer){
+    productContainer.innerHTML = '';
+
+    Object.values(cartItems).map(item => {
+        productContainer.innerHTML += `
+        <div class="product-title">
+        <ion-icon name="close-circle-outline"></ion-icon>
+        <img src="./pics/${item.tag}.jpg" height="100" width="150">
+        <span>${item.name}</span>
+        </div>
+        <div class="price-title">${item.price},00 kr</div>
+        <div class="quantity-title">
+        <ion-icon name="caret-back-outline"></ion-icon>
+        <span>${item.inCart}</span>
+        <ion-icon name="caret-forward-outline"></ion-icon>
+        </div>
+        <div class="total-title">
+        ${item.inCart * item.price},00 kr
+        </div>
+        `;
+    });
+    productContainer.innerHTML += `
+    <div class="basketTotalContainer">
+    <h4 class="basketTotalTitle>
+        Basket Total
+        </h4>
+        <h4 class="basketTotal">
+        ${cartCost},00 kr
+        </h4></div>
+    `;
+
+}
+}
 
 //Calls a function
 onLoadCartNumbers();
+displayCart();
+
+
+
