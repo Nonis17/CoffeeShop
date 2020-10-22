@@ -138,8 +138,8 @@ if (cartItems && productContainer){
 
     Object.values(cartItems).map(item => {
         productContainer.innerHTML += `
+      
         <div class="product-title">
-        <ion-icon name="close-circle-outline"></ion-icon>
         <img src="./pics/${item.tag}.jpg" height="100" width="150">
         <span>${item.name}</span>
         </div>
@@ -151,7 +151,9 @@ if (cartItems && productContainer){
         </div>
         <div class="total-title">
         ${item.inCart * item.price},00 kr
-        </div>
+        <span class="delete">X</span>
+        </div>    
+
         `;
     });
     productContainer.innerHTML += `
@@ -167,9 +169,15 @@ if (cartItems && productContainer){
 }
 }
 
+
+
+
+
+
+
+
 //Calls a function
 onLoadCartNumbers();
 displayCart();
-
 
 

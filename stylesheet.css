@@ -52,7 +52,7 @@ header{
 .navbar a:hover{ 
     color: white; 
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: wavy underline;
 }
 
 @media screen and (min-width: 769px)
@@ -197,17 +197,19 @@ article{
 
 .sale-item > h1{margin: 1rem 1rem 0;}
 
+.coffee-price{
+align-self: center;
+font-size: 50px;
+}
+
 .sale-item > p 
+
 {
     font-size: 1rem;
     margin: 0.25em 1rem 1rem; 
 }
 
-.sale-item > ul 
-{
-    font-size: 1rem;
-    margin: 0 0 1rem; 
-}
+
 
 /*Experiment nedan*/
 .add-cart{
@@ -314,6 +316,10 @@ text-decoration: underline;
     letter-spacing: 2px;
 }
 
+h3{
+    margin: 30px;
+}
+
 .container-checkout{
     max-width: 650px;
     justify-content: space-around;
@@ -345,14 +351,14 @@ align-items: center;
 }
 
 .quantity-title{
-width: 30%;
+width: 20%;
 display: flex;
 align-items: center; 
 
 }
 
 .total-title{
-width: 10%;
+width: 20%;
 display: flex;
 align-items: center; 
 }
@@ -370,6 +376,7 @@ align-items: center;
     margin-left: 10px;
     margin-right: 10px;
     cursor: poiner; 
+
 }
 
 
@@ -380,6 +387,22 @@ align-items: center;
     padding: 10px 0;
 }
 
+.delete
+{
+    margin-left: 35px;
+    font-size: 10px;
+    color: black;
+    border: 1px solid #3c0b42ce;
+    padding: 4px 6px 4px 6px; 
+    float: right;
+}
+.delete:hover{
+    cursor: pointer;
+    
+}
+
+
+
 
 /* ------ CSS för kontakt-sidan ------ */
 
@@ -387,7 +410,6 @@ align-items: center;
 .contactForm
 {
     position: relative;
-    z-index: -1;
     text-align: center;
 border: none;
   padding: 20px;
@@ -471,3 +493,25 @@ form input[type="text"]:focus, input[type="email"]:focus
     color: rgb(22, 21, 21);
     text-decoration: underline;
   }
+
+/* ------ Till JavaScripts valideringen ------ */
+
+.reply
+{
+  font-size: 12px;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s; 
+}
+.reply-active
+{
+    visibility: visible; 
+    opacity: 1;
+}
+
+.invalidMessage{
+  color: red; 
+}
+.invalidForm{
+  border: 1px solid red;
+  color: red; 
+}
