@@ -1,45 +1,10 @@
+
 let carts = document.querySelectorAll('.add-cart');
 
 //An Array with objects inside
-let products = [
 
-    {
-        name: "Arabic Coffee",
-        tag: "arabiccoffee",
-        price: 89,
-        inCart: 0
-    },
-    {
-        name: "Peru Coffee",
-        tag: "Peru",
-        price: 69,
-        inCart: 0
-    },
-    {
-        name: "Africa Coffee",
-        tag: "africanbeans",
-        price: 79,
-        inCart: 0
-    },
-    {
-        name: "Ethiopia Coffee",
-        tag: "ethiopian",
-        price: 99,
-        inCart: 0
-    },
-    {
-        name: "Bali Coffee",
-        tag: "balicoffee",
-        price: 59,
-        inCart: 0
-    },
-    {
-        name: "Columbia Coffee",
-        tag: "Columbia",
-        price: 79,
-        inCart: 0
-    }
-]
+
+
 
 for (let i = 0; i < carts.length; i++){
     carts[i].addEventListener('click', () => {

@@ -18,20 +18,22 @@ header{
         }
 
 .headTitle{
+  font-family: cursive;
     padding: 70px;
-    color: #302010;
+    color: #ffffff;
     text-align: center;
-    font-size: 5rem;
+    font-size: 4rem;
     letter-spacing: 2px;
 }
 
 /*Menu bar*/
 .navbar{
+  z-index: 2;
     position: sticky;
     top: 0;
     background-color:#1b1209;
     padding: 15px;
- font-size: 1.5rem; 
+ font-size: 1.1rem; 
  min-height: 60px;
  text-align: center;
 }
@@ -44,7 +46,7 @@ header{
 
 /*Menu links*/
 .navbar a{
-   padding: 10px;
+   padding: 29px;
     color: white; 
     text-decoration: none;
     list-style-type: none;
@@ -140,6 +142,59 @@ header{
     background-color: #53381c;
   }
 }
+/*Här börjar sökrutan*/
+
+.below-nav{
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+align-items: flex-end; 
+}
+
+/*.search-field-hidden{
+  visibility: hidden;
+}
+
+.search-field-nonhidden{
+  visibility: visible; 
+}*/
+
+#search-field{
+  box-shadow: none;
+  padding-left: 20px;
+  width: 250px;
+  font-size: 14px;
+  border: 1px solid black;
+  background-color: #eeeeee;
+}
+
+#search-btn{
+  background-image: url(pics/search.png);
+  width: 26px;
+  height: 27px;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: white;
+cursor: pointer;
+}
+
+.search-not-found{
+  color: red;
+  float: right;
+  margin-bottom: 40px;
+  margin-right: 100px;
+  font-size: 12px;
+}
+
+.search-result{
+  position: relative; 
+  z-index: 2; 
+  background-color: white;
+  background-size: cover;
+}
+
 
 /*För de webbläsare som inte stödjer grid, en s.k Fallback layout*/
 main 
@@ -147,9 +202,6 @@ main
     max-width: 500px;
     margin: 0 auto; 
     padding: 1rem;
-}
-article{
-    margin: 1rem, 0;
 }
 
 /* Grid code starts here*/
@@ -161,7 +213,7 @@ article{
     
     .deals /*Här finns hela koden för Grid*/
     {
-    
+    margin-top: 50px;
         font-family: times new roman;
         font-size: 80%; 
     }
@@ -180,12 +232,24 @@ article{
     flex-flow: column;
     border: 1px solid black; 
     border-radius: 1rem;
-    padding: 2rem;
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 0.5rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .sale-item:hover{
     cursor: pointer;
+}
+
+.icon{
+  position: absolute;
+  height: 5%;
+  margin-top: -10px;
+  margin-left: 230px;
+  box-shadow: none!important;
+
 }
 
 .sale-item img 
@@ -197,9 +261,24 @@ article{
 
 .sale-item > h1{margin: 1rem 1rem 0;}
 
+
+.price-btn-container{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .coffee-price{
 align-self: center;
-font-size: 50px;
+border: 1px solid rgb(110, 83, 48);
+padding: 10px;
+border-radius: 4px;
+
+}
+
+.sale-item > ul li {
+  margin: 7px;
+  font-size: 12px;
 }
 
 .sale-item > p 
@@ -209,13 +288,10 @@ font-size: 50px;
     margin: 0.25em 1rem 1rem; 
 }
 
-
-
-/*Experiment nedan*/
 .add-cart{
     align-self: center; 
     display: block;
-    width: 50%;
+    width: 40%;
     transition: all 0.4s ease-in-out; 
    opacity: 0;
     cursor: pointer; 
@@ -243,8 +319,6 @@ font-size: 50px;
     text-decoration: none;
     color: white;
 } 
-
-/*här slutar experimentet*/
 
 .sale-item > button{
     background: rgb(110, 83, 48); 
@@ -307,14 +381,6 @@ text-decoration: underline;
 }
 
 /* ----- Här börjar all CSS specifikt för Shopping Cart sidan -----*/ 
-
-.ShoppingCartPageHeader{
-    padding: 70px;
-    color: #302010;
-    text-align: center;
-    font-size: 5rem;
-    letter-spacing: 2px;
-}
 
 h3{
     margin: 30px;
@@ -407,36 +473,44 @@ align-items: center;
 /* ------ CSS för kontakt-sidan ------ */
 
  /*Här börjar koden för Kontakt formuläret*/ 
+
+ .contact-title{
+   text-align: center;
+ }
+
 .contactForm
 {
     position: relative;
     text-align: center;
 border: none;
   padding: 20px;
-  margin-top: 80px;
+  margin-top: 70px;
   margin-bottom: 30px;
 }
 
 /*Gör att input-rutorna är mjuka i kanterna*/
 form input[type="text"], input[type="tel"], input[type="email"]
 {
+border: 1px solid black;
 padding: 7px 30px 7px 2px;
 border-radius: 4px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#bio{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  resize: none;}
+#bio{
+  border: 1px solid black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  resize: none;}
 
 
 form input:focus
   {
-    border: 3px solid black; 
+    border: 2px solid black; 
     outline: none;
   }
 
 .bio:focus
   {
-    border: 3px solid black; 
+    border: 2px solid black; 
     outline: none;
   }
 
@@ -448,7 +522,7 @@ form input#phone:valid:not(:placeholder-shown){border: 2px solid rgb(33, 141, 33
 
 form input[type="text"]:focus, input[type="email"]:focus
   {
-    border: 3px solid black;
+    border: 2px solid black;
     outline: none; 
   }
 
@@ -508,10 +582,54 @@ form input[type="text"]:focus, input[type="email"]:focus
     opacity: 1;
 }
 
+.invalidForm{
+
+border: 1px solid red;
+color: red; 
+  
+}
+
 .invalidMessage{
   color: red; 
+
 }
-.invalidForm{
-  border: 1px solid red;
-  color: red; 
+
+
+/* ABOUT PAGE */
+
+.about{
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about-title{
+font-family: cursive;
+margin: 20px;
+font-size: 40px;
+align-self: center;
+}
+
+.emmabali{
+  margin: 20px;
+  border-radius: 4px;
+}
+
+.about-text{
+margin: 30px;
+line-height: 1.5em;
+}
+
+.about-coffee-beans{
+  height: 50%;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.coffee-plant{
+border-radius: 4px;
 }

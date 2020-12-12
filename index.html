@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Having trouble finding the best tasting coffee? Look no further, we offer the best quality coffee on the market!">
     <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
-    <script src="index.js" defer></script>
+<script src="products.js" defer></script>    
+<script src="index.js" defer></script>
+    <script src="searchbox.js" defer></script>
     <link rel="stylesheet" href="stylesheet.css">
-    <title>Shop</title>
+    <title>Sunshine Coffee Shop</title>
 </head>
 <body>
     <header>
-        <h1 class="headTitle">My Little Sunshine Coffee Shop</h1>
+        <h1 class="headTitle">The Sunshine Coffee Shop</h1>
     </header>
 
 <div class="navbar">
@@ -26,109 +29,180 @@
     
             <div class="dropdown-content">
             <a href="index.html">Shop</a>
-            <a href="">About</a>
+            <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
             <a href="shoppingcart.html" class="cart"><ion-icon name="cart-outline" size="small"></ion-icon>Cart(<span>0</span>)</a>
-        </div> </div>
-    </nav></div>
+        </div> 
+    </nav></div></div>
 
+<!--Sökrutan-->
+    <div class="below-nav">
+        <form method="get" action="" class="search"> 
+        
+            <input type="text" name="search" class="search-field-hidden" id="search-field" value="" />
+            <input type="button" name="Searched" id="search-btn" value=""/>
+        </form>
+</div>
+<!--Error message for the search field-->
+<div class="search-error-msg"></div>
 
+<!--Here the search result appears-->
+<div class="search-result"></div>
 
     <main class="deals"> <!--Grid conteiner-->
-
-        <article class="sale-item"> <!--Grid barn. Även en flexbox-conteiner-->
+        <article class="sale-item arabic"> <!--Grid barn. Även en flexbox-conteiner-->
             <h1>Arabic Coffee 500g</h1> <!--Flexbox items/barn-->
-            <p>For the intense flavour lover</p>
-           
+            <p>Arabica coffee is the world's most popular type of coffee</p>
                 <ul>
-                    <li>Whole Beans</li>
-                    <li>Organic</li>
-                    <li>Dark-roasted coffee</li>
+                    <li>Arabica coffee is a type of coffee made from the beans of the Coffea arabica plant.</li>
+                    <li>Originated in the Arabian Peninsula</li>
+                    <li>High quality arabica coffee with hints of chocolate, nuts, and caramel</li>
+                    <li>There will be a slight/pleasant acidity, and a little bitterness</li>
                 </ul>
-  
-        
             <img src="pics/arabiccoffee.jpg" width="250" height="200" class="picturesOfCoffee" alt="arabic coffee beans">
+            <div class="price-btn-container">
             <p class="coffee-price">89kr</p>
             <button class="add-cart cart1">Add to cart</button>
+            </div>
         </article>
     
-        <article class="sale-item"> <!--Grid item/barn-->
+        <article class="sale-item peru"> <!--Grid item/barn-->
             <h1>Peru Coffee 500g</h1> <!--Flexbox items/barn-->
-            <p>This is the best soft coffee</p>
-            
-           
+            <p>Peruvian coffee is complex and rich</p>           
             <ul>
-                <li>Whole beans</li>
-                <li>Cocoa and berries flavour</li>
-                <li>Light-roasted coffee</li>
+                <li>A good Peruvian coffee is gentle, aromatic and flavorful with a mild acidity.</li>
+                <li>Notes of citrus, floral, and fruit </li>
+                <li>Dry processed and light-roasted</li>
+                <li>Medium body with floral elements</li>
             </ul>
  
             <img src="pics/peru.jpg" width="250" height="200" class="picturesOfCoffee" alt="peru coffee beans">
+            <div class="price-btn-container">
             <p class="coffee-price">69kr</p>
             <button class="add-cart cart2">Add to cart</button>
+            </div>
         </article>
     
-        <article class="sale-item"><!--Grid item/barn-->
+        <article class="sale-item africa"><!--Grid item/barn-->
             <h1>African Coffee 500g</h1> <!--Flexbox items/barn-->
             <p>The roots of coffee</p>
-    
-   
             <ul>
-                <li>Whole Beans</li>
+                <li>From Kenya, Rwanda & Burundi</li>
                 <li>Medium-roasted coffee</li>
-                <li>Fruity aromatic</li>
+                <li>Rich earthy flavor with subtle notes of fruits, flowers, and spices</li>
             </ul> 
             <img src="pics/africanbeans.jpg" width="250" height="200" class="picturesOfCoffee" alt="african bean coffee">
+            <div class="price-btn-container">
             <p class="coffee-price">79kr</p>
             <button class="add-cart cart3">Add to cart</button>
+            </div>
         </article>
     
-        <article class="sale-item"> <!--Grid item/barn-->
+        <article class="sale-item ethiopia"> <!--Grid item/barn-->
             <h1>Ethiopian Coffee 500g</h1> <!--Flexbox items/barn-->
-            <p>This is the best quality coffee</p>
-         
+            <p>A land of legend when it comes to coffee’s origins</p>
             <ul>
-                <li>Exclusive</li>
-                <li>Whole Beans</li>
-                <li>Organic</li>
+                <li>Exclusive arabica coffee beans</li>
+                <li>Whole organic beans with medium body</li>
+                <li>Flavors of exotic fruit and berry</li>
             </ul> 
             <img src="pics/ethiopian.jpg" width="250" height="200" class="picturesOfCoffee" alt="ethiopian coffee beans">
+            <img src="pics/premium.png" class="icon" alt="premium coffee icon">
+            <div class="price-btn-container">
             <p class="coffee-price">99kr</p>
             <button class="add-cart cart4">Add to cart</button>
+            </div>
         </article>
     
-        <article class="sale-item"> <!--Grid item/barn-->
+        <article class="sale-item bali"> <!--Grid item/barn-->
             <h1>Balinesean Coffee 500g</h1> <!--Flexbox items/barn-->
-            <p>Unprocessed raw from the djungle</p>
-    
-        
+            <p>Unprocessed raw from the djungle</p>      
             <ul>
                 <li>Whole beans</li>
+                <li>Medium roasted whole beans allowing the true flavor characteristic to come through for a remarkable taste.</li>
                 <li>Fruity and smooth flavour</li>
                 <li>Organic</li>
             </ul>
             <img src="pics/balicoffee.jpg" width="250" height="200" class="picturesOfCoffee" alt="Bali coffee beans">
+            <div class="price-btn-container">
             <p class="coffee-price">59kr</p>
             <button class="add-cart cart5">Add to cart</button>
+            </div>
         </article>
     
-        <article class="sale-item"> <!--Grid item/barn-->
+        <article class="sale-item columbia"> <!--Grid item/barn-->
             <h1>Columbian Coffee 500g</h1> <!--Flexbox items/barn-->
-            <p>Deep flavour</p>
-       
-        
+            <p>Colombian coffee is considered to be among the best in the world</p>
             <ul>
-                <li>Dark roasted</li>
-                <li>Eco</li>
-                <li>Nutty and spicy</li>
+                <li>Mellow acidity paired with caramel sweetness </li>
+                <li>Sweet and medium-bodied</li>
+                <li>Arabica beans</li>
+                <li>Hints of nutty notes with caramel and creamy aftertastes</li>
             </ul> 
             <img src="pics/Columbia.jpg" width="250" height="200" class="picturesOfCoffee" alt="columbia coffee beans">
+            <div class="price-btn-container">
+            <p class="coffee-price">89kr</p>
+            <button class="add-cart cart6">Add to cart</button>
+            </div>
+        </article>
+
+        <article class="sale-item brazil"> <!--Grid item/barn-->
+            <h1>Brazil Coffee 500g</h1> <!--Flexbox items/barn-->
+            <p>Leading country of excellent coffee beans</p>
+            <ul>
+                <li>100% Pure Brazil Coffee is known for a pleasantly mild, full bodied and has wonderfully balanced flavor.</li>
+                <li>A smooth and mellow flavor. Soft, nutty and low acid</li>
+                <li>Bittersweet chocolate taste</li>
+            </ul> 
+            <img src="pics/brazil.jpg" width="250" height="200" class="picturesOfCoffee" alt="brazil coffee beans">
+            <div class="price-btn-container">
+            <p class="coffee-price">99kr</p>
+            <button class="add-cart cart6">Add to cart</button>
+        </div>
+        </article>
+
+        <article class="sale-item zambia"> <!--Grid item/barn-->
+            <h1>Zambia Coffee 500g</h1> <!--Flexbox items/barn-->
+            <p>A younger coffee on the market</p>
+            <ul>
+                <li>Softer than the typical African coffee</li>
+                <li>Fine balance of full body and bright acidity</li>
+                <li>The characteristics of this coffee are typical of other fine East African coffees.</li>
+                <li>Sweeter, milder flavor and has actual notes of honey or vanilla</li>
+            </ul> 
+            <img src="pics/zambia.jpg" width="250" height="200" class="picturesOfCoffee" alt="zambia coffee beans">
+            <img src="pics/new.png" class="icon" alt="new coffee">
+            <div class="price-btn-container">
+            <p class="coffee-price">59kr</p>
+            <button class="add-cart cart6">Add to cart</button>
+            </div>
+        </article>
+
+        <article class="sale-item costarica"> <!--Grid item/barn-->
+            <h1>Costa Rica Coffee 500g</h1> <!--Flexbox items/barn-->
+            <p>Fine tasting coffee for the picky coffee drinkers</p>
+            <ul>
+                <li>Arabica beans</li>
+                <li>Medium Roast, a rich, slightly acidic chocolate and caramel taste</li>
+                <li>With a notable smoothness to it</li>
+                <li>Fresh roasted then immediately packed and sealed to assure freshness</li>
+            </ul> 
+            <img src="pics/costarica.png" width="250" height="200" class="picturesOfCoffee" alt="costa rica coffee beans">
+            <div class="price-btn-container">
             <p class="coffee-price">79kr</p>
             <button class="add-cart cart6">Add to cart</button>
+            </div>
         </article>
+
+      
+
+
+
+
+
+
     </main>
 
-    
     <footer>
         <h2 class="footerTitle">Få vårt nyhetsbrev!</h2>
         <form>
