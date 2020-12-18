@@ -2,10 +2,6 @@
 let carts = document.querySelectorAll('.add-cart');
 
 //An Array with objects inside
-
-
-
-
 for (let i = 0; i < carts.length; i++){
     carts[i].addEventListener('click', () => {
 cartNumbers(products[i]);
@@ -122,19 +118,67 @@ if (cartItems && productContainer){
         `;
     });
     productContainer.innerHTML += `
+    
     <div class="basketTotalContainer">
-    <h4 class="basketTotalTitle>
-        Basket Total
-        </h4>
-        <h4 class="basketTotal">
-        ${cartCost},00 kr
+<br>
+          <h4 class="basketTotal">
+        Basket total: ${cartCost},00 kr
         </h4></div>
     `;
-
 }
 }
 
+/*HÄR BÖRJAR EXPERIMENT ATT HOVRA ÖVER KUNDVAGNEN FÖR ATT SE SINA PRODUKTER*/
 
+let onMouseOver = document.querySelector('.dropdown'); 
+
+onMouseOver.addEventListener('mouseover', function(){
+
+//Gets items that is in LocalStorage:
+let cartItems = localStorage.getItem("productsInCart");
+//Converts JSON string to JS numbers:
+cartItems = JSON.parse(cartItems); 
+
+//IF we have something in local storage(cartItems):
+let productContainer = document.querySelector(".dropdown-content");
+let cartCost = localStorage.getItem("totalCost");
+
+if (cartItems && productContainer){
+   productContainer.innerHTML = '';
+
+   Object.values(cartItems).map(item => {
+       productContainer.innerHTML += `
+     <br>
+       <div class="product-title">
+       <img src="./pics/${item.tag}.jpg" height="60" width="100">
+       <span>${item.name}</span>
+       </div>
+       <div class="hover-cart-price-title">${item.price},00 kr</div><br>
+       <div class="hover-cart-quantity-title">
+          <span>Quantity: ${item.inCart} x  ${item.inCart * item.price},00 kr </span>
+      
+       <button class="hover-delete">Delete</button>
+       </div><br><hr><br><br>
+
+       `;
+   });
+   productContainer.innerHTML += `
+   <div class="hover-basketTotalContainer">
+       <span class="basketTotal">
+       Total: ${cartCost},00 kr
+       </span></div><br>
+   `
+ var anchorTag = document.createElement('a');
+ anchorTag.setAttribute('href','shoppingcart.html');
+ anchorTag.classList.add('go-to-checkout');
+ anchorTag.innerText = 'Go to checkout';
+
+  productContainer.appendChild(anchorTag);
+   
+   ;
+}
+
+});
 
 
 

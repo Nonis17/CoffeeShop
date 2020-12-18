@@ -6,6 +6,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
     <script src="index.js" defer></script>
+    <script src="menu.js" defer></script>   
     <link rel="stylesheet" href="stylesheet.css">
     <title>About - Sunshine Coffee Shop</title>
 </head>
@@ -14,23 +15,24 @@
         <h1 class="headTitle">The Sunshine Coffee Shop</h1>
     </header>
 
-<div class="navbar">
-     <div class="dropdown">
-         <p class="menu">Menu</p>
-        <button class="hamburger">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-            </button>
-            <nav>
-    
-            <div class="dropdown-content">
-            <a href="index.html">Shop</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="shoppingcart.html" class="cart"><ion-icon name="cart-outline" size="small"></ion-icon>Cart(<span>0</span>)</a>
-        </div> 
-    </nav></div></div>
+<!--New menu-->
+<nav>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <div class="dropdown">
+          
+        <button class="dropbtn"><a href="shoppingcart.html" class="cart"><ion-icon name="cart-outline" size="small"></ion-icon>(<span>0</span>)</a>
+        </button>
+          <div class="dropdown-content">
+            <p>Your cart is empty at the moment!</p>
+          </div>
+        </div>
+           
+        <a href="javascript:void(0);" class="menu-icon" onclick="myFunction()">&#9776;</a>
+      </div> 
+    </nav>
 
 <main>
     <div class="about">
@@ -40,30 +42,31 @@
     From a dream to a reality
 </h2>
 
-<p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae error expedita, exercitationem porro dolorum culpa unde fugit qui nihil possimus adipisci, animi distinctio aliquid iure? Eum vero id quo amet.</p>
+<p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae error expedita, exercitationem porro dolorum culpa unde fugit qui nihil possimus adipisci, animi distinctio aliquid iure? Eum vero id quo amet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique dolore incidunt repellendus placeat architecto? Illum saepe debitis minima adipisci corporis quae maxime consectetur laboriosam, neque eligendi, omnis nisi voluptatem maiores? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos a soluta ea esse aperiam vel, maxime, dolores officia fuga non vitae possimus velit facilis ipsam ab perferendis. Repudiandae, minima provident.</p>
 <img src="pics/coffee-beans.jpg" class="about-coffee-beans" alt="coffee beans at plantation">
 
 
-<p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae error expedita, exercitationem porro dolorum culpa unde fugit qui nihil possimus adipisci, animi distinctio aliquid iure? Eum vero id quo amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos harum amet aperiam esse similique provident animi eius mollitia libero deleniti distinctio necessitatibus, magnam fuga voluptas vero sequi delectus reiciendis. Nisi! </p>
+<p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae error expedita, exercitationem porro dolorum culpa unde fugit qui nihil possimus adipisci, animi distinctio aliquid iure? Eum vero id quo amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos harum amet aperiam esse similique provident animi eius mollitia libero deleniti distinctio necessitatibus, magnam fuga voluptas vero sequi delectus reiciendis. Nisi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, temporibus nesciunt consequuntur molestiae quam amet doloremque nisi quaerat repellat, velit voluptate omnis ad voluptates quod sit eum atque, praesentium aperiam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure sit veritatis aperiam amet exercitationem, soluta expedita vel quia voluptates asperiores voluptatibus provident ipsum illum doloribus repellat nihil dolore quas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptate praesentium ea odio accusantium, aperiam itaque repellendus vitae eligendi modi sapiente natus consequatur asperiores inventore perspiciatis nostrum dicta voluptates sint?</p>
 
-<img src="pics/coffee-plantation.jpg" class="coffee-plant" height="350" width="750" alt="coffee plantation">
+
 </div>
 </main>
 
-        <footer>
-        <h2 class="footerTitle">Få vårt nyhetsbrev!</h2>
-        <form>
-            
-                <label for="prenumerationEmail"></label>
-                <input type="email" aria-labelledby="prenumerationEmail" class="email" id="prenumerationEmail" placeholder="Ange din epostadress" required><br>
-        </form>
-               
-                <button type="submit" class="submitButton" aria-label="subscribe">Spara</button>
-            
-        <p>Copyright 2020 Emma Lilja</p>
-    </footer>
 
 
+<footer>
+    <h2 class="footerTitle">Nyhetsbrevsprenumeration!</h2>
+    <p class="footer-text">Genom att klicka “Ja tack till nyhetsbrev” godtar jag att Sunshine Coffee Shop sparar min epostadress i enlighet med deras dataskyddspolicy (Du kan avsluta din prenumeration när som helst på länken i slutet av varje nyhetsbrev)</p>
+    <form>
+        
+            <label for="prenumerationEmail"></label>
+            <input type="email" aria-labelledby="prenumerationEmail" class="email" id="prenumerationEmail" placeholder="Ange din epostadress" required><br>
+    </form>
+           
+            <button type="submit" class="submitButton" aria-label="subscribe">Ja tack till nyhetsbrev</button>
+        
+    <p>Copyright 2020 Emma Lilja</p>
+</footer>
 
 </body>
 </html>

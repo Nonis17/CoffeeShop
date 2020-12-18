@@ -6,6 +6,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
     <script src="shoppingcart.js" defer></script>
+    <script src="menu.js" defer></script>   
     <script src="index.js" defer></script>
     <link rel="stylesheet" href="stylesheet.css">
     <title>Shoppingcart - Sunshine Coffee Shop</title>
@@ -16,27 +17,27 @@
     <h1 class="headTitle">The Sunshine Coffee Shop</h1>
 </header>
 
-<div class="navbar">
-    <div class="dropdown">
-        <p class="menu">Menu</p>
-       <button class="hamburger">
-           <span class="line"></span>
-           <span class="line"></span>
-           <span class="line"></span>
-           </button>
-           <nav>
-   
-           <div class="dropdown-content">
-           <a href="index.html">Shop</a>
-           <a href="about.html">About</a>
-           <a href="contact.html">Contact</a>
-           <a href="shoppingcart.html" class="cart"><ion-icon name="cart-outline" size="small"></ion-icon>Cart(<span>0</span>)</a>
-       </div> 
-   </nav></div></div>
+<!--New menu-->
+<nav>
+  <div class="topnav" id="myTopnav">
+      <a href="index.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <div class="dropdown">
+        
+      <button class="dropbtn"><a href="shoppingcart.html" class="cart"><ion-icon name="cart-outline" size="small"></ion-icon>(<span>0</span>)</a>
+      </button>
+        <div class="dropdown-content">
+          <p>Your cart is empty at the moment!</p>
+        </div>
+      </div>
+         
+      <a href="javascript:void(0);" class="menu-icon" onclick="myFunction()">&#9776;</a>
+    </div> 
+  </nav>
 
 <h3>
     Your shopping cart</h3>
-
 
     <div class="container-checkout">
         <div class="shoppingcart-header">
@@ -51,17 +52,20 @@
     </div>
 
 
-<footer>
-    <h2 class="footerTitle">Få vårt nyhetsbrev!</h2>
-    <form>
-     
-            <label for="prenumerationEmail"></label>
-            <input type="email" aria-labelledby="prenumerationEmail" class="email" id="prenumerationEmail" placeholder="Ange din epostadress" required><br>
-    </form>
-           
-            <button type="submit" class="submitButton" aria-label="subscribe">Spara</button>
+
+    <footer>
+        <h2 class="footerTitle">Nyhetsbrevsprenumeration!</h2>
+        <p class="footer-text">Genom att klicka “Ja tack till nyhetsbrev” godtar jag att Sunshine Coffee Shop sparar min epostadress i enlighet med deras dataskyddspolicy (Du kan avsluta din prenumeration när som helst på länken i slutet av varje nyhetsbrev)</p>
+        <form>
             
-    <p>Copyright 2020 Emma Lilja</p>
-</footer>
+                <label for="prenumerationEmail"></label>
+                <input type="email" aria-labelledby="prenumerationEmail" class="email" id="prenumerationEmail" placeholder="Ange din epostadress" required><br>
+        </form>
+               
+                <button type="submit" class="submitButton" aria-label="subscribe">Ja tack till nyhetsbrev</button>
+            
+        <p>Copyright 2020 Emma Lilja</p>
+    </footer>
+
 </body>
 </html>

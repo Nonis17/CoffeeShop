@@ -47,7 +47,7 @@ let isDisplayingSearchError = false;
       errorMsg.innerHTML = "Skriv något i sökrutan";
 
       let searchErrorMsg = document.querySelector('.search-error-msg');
-      console.log(searchErrorMsg);
+    
       searchErrorMsg.appendChild(errorMsg);
          return false;
       }      
@@ -59,6 +59,11 @@ let isDisplayingSearchError = false;
 
 //Search for coffee
     function searchCoffee(){
+      
+      //Empties the searched product field
+      let searchedProduct = document.querySelector('.search-result-product');
+      searchedProduct.innerHTML = "";
+
         let searchInput = document.getElementById('search-field').value;
         
         function searchFilter(coffee) { 
@@ -79,11 +84,29 @@ let isDisplayingSearchError = false;
                  
         for (let i = 0; i < filteredArray.length; i++){
           let element = filteredArray[i];
-    
-          searchOutput.innerHTML += `${element.name}<br />${element.description}<br />`;
+   
+          
+searchOutput.classList.add('search-result-active');
+
+
+          searchedProduct.innerHTML += `${element.name}<br /><br />`;
         }
         
+        let closeButton = document.querySelector('.x-button'); 
+
+        closeButton.addEventListener('click', function(){
+        console.log("Clicked!")
+
+        searchOutput.classList.remove('search-result-active');
+        
+        searchBox.value = defaultText; 
+
+        });
+
         };
+
+
+
         
 
 

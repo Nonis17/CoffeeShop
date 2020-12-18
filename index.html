@@ -6,7 +6,8 @@
     <meta name="description" content="Having trouble finding the best tasting coffee? Look no further, we offer the best quality coffee on the market!">
     <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
-<script src="products.js" defer></script>    
+<script src="products.js" defer></script>
+<script src="menu.js" defer></script>      
 <script src="index.js" defer></script>
     <script src="searchbox.js" defer></script>
     <link rel="stylesheet" href="stylesheet.css">
@@ -17,37 +18,48 @@
         <h1 class="headTitle">The Sunshine Coffee Shop</h1>
     </header>
 
-<div class="navbar">
-     <div class="dropdown">
-         <p class="menu">Menu</p>
-        <button class="hamburger">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-            </button>
-            <nav>
-    
-            <div class="dropdown-content">
-            <a href="index.html">Shop</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="shoppingcart.html" class="cart"><ion-icon name="cart-outline" size="small"></ion-icon>Cart(<span>0</span>)</a>
-        </div> 
-    </nav></div></div>
+<!--New menu-->
+<nav>
+<div class="topnav" id="myTopnav">
+    <a href="index.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <div class="dropdown">
+      
+    <button class="dropbtn"><a href="shoppingcart.html" class="cart"><ion-icon name="cart-outline" size="small"></ion-icon>(<span>0</span>)</a>
+    </button>
+      <div class="dropdown-content">
+          <p>Your cart is empty at the moment!</p>
+      </div>
+    </div>
+       
+    <a href="javascript:void(0);" class="menu-icon" onclick="myFunction()">&#9776;</a>
+  </div> 
+</nav>
 
 <!--Sökrutan-->
+<div class="second-nav-bar">
+
     <div class="below-nav">
         <form method="get" action="" class="search"> 
         
             <input type="text" name="search" class="search-field-hidden" id="search-field" value="" />
             <input type="button" name="Searched" id="search-btn" value=""/>
         </form>
+        <!--Error message for the search field-->
+<div class="search-error-msg">
 </div>
-<!--Error message for the search field-->
-<div class="search-error-msg"></div>
+        </div>
+
+</div>
+
+
 
 <!--Here the search result appears-->
-<div class="search-result"></div>
+<div class="search-result">
+    <button class="x-button">X</button>
+    <div class="search-result-product"></div>
+</div>
 
     <main class="deals"> <!--Grid conteiner-->
         <article class="sale-item arabic"> <!--Grid barn. Även en flexbox-conteiner-->
@@ -74,6 +86,7 @@
                 <li>Notes of citrus, floral, and fruit </li>
                 <li>Dry processed and light-roasted</li>
                 <li>Medium body with floral elements</li>
+                <li>Fresh roasted then immediately packed and sealed to assure freshness</li>
             </ul>
  
             <img src="pics/peru.jpg" width="250" height="200" class="picturesOfCoffee" alt="peru coffee beans">
@@ -90,6 +103,7 @@
                 <li>From Kenya, Rwanda & Burundi</li>
                 <li>Medium-roasted coffee</li>
                 <li>Rich earthy flavor with subtle notes of fruits, flowers, and spices</li>
+                <li>Fresh roasted then immediately packed and sealed to assure freshness</li>
             </ul> 
             <img src="pics/africanbeans.jpg" width="250" height="200" class="picturesOfCoffee" alt="african bean coffee">
             <div class="price-btn-container">
@@ -105,6 +119,7 @@
                 <li>Exclusive arabica coffee beans</li>
                 <li>Whole organic beans with medium body</li>
                 <li>Flavors of exotic fruit and berry</li>
+                <li>Fresh roasted then immediately packed and sealed to assure freshness</li>
             </ul> 
             <img src="pics/ethiopian.jpg" width="250" height="200" class="picturesOfCoffee" alt="ethiopian coffee beans">
             <img src="pics/premium.png" class="icon" alt="premium coffee icon">
@@ -116,12 +131,13 @@
     
         <article class="sale-item bali"> <!--Grid item/barn-->
             <h1>Balinesean Coffee 500g</h1> <!--Flexbox items/barn-->
-            <p>Unprocessed raw from the djungle</p>      
+            <p>From the djungles of the magic island Bali</p>      
             <ul>
                 <li>Whole beans</li>
                 <li>Medium roasted whole beans allowing the true flavor characteristic to come through for a remarkable taste.</li>
                 <li>Fruity and smooth flavour</li>
                 <li>Organic</li>
+                <li>Fresh roasted then immediately packed and sealed to assure freshness</li>
             </ul>
             <img src="pics/balicoffee.jpg" width="250" height="200" class="picturesOfCoffee" alt="Bali coffee beans">
             <div class="price-btn-container">
@@ -153,6 +169,7 @@
                 <li>100% Pure Brazil Coffee is known for a pleasantly mild, full bodied and has wonderfully balanced flavor.</li>
                 <li>A smooth and mellow flavor. Soft, nutty and low acid</li>
                 <li>Bittersweet chocolate taste</li>
+                <li>Fresh roasted then immediately packed and sealed to assure freshness</li>
             </ul> 
             <img src="pics/brazil.jpg" width="250" height="200" class="picturesOfCoffee" alt="brazil coffee beans">
             <div class="price-btn-container">
@@ -203,17 +220,26 @@
 
     </main>
 
-    <footer>
-        <h2 class="footerTitle">Få vårt nyhetsbrev!</h2>
+    <footer class="flex-footer">
+        <div class="socials-div">
+            <p class="socials-text">Följ oss</p>
+            <img src="pics/facebook.png" class="social-icon" alt="facebook">
+            <img src="pics/instagram.png" class="social-icon" alt="instagram">
+            <img src="pics/youtube.png" id="youtube-icon" class="social-icon" alt="youtube">
+            </div>
+
+<div class="prenumeration-container">
+        <h2 class="footerTitle">Nyhetsbrevsprenumeration!</h2>
+        <p class="footer-text">Genom att klicka “Ja tack till nyhetsbrev” godtar jag att Sunshine Coffee Shop sparar min epostadress i enlighet med deras dataskyddspolicy (Du kan avsluta din prenumeration när som helst på länken i slutet av varje nyhetsbrev)</p>
         <form>
             
                 <label for="prenumerationEmail"></label>
                 <input type="email" aria-labelledby="prenumerationEmail" class="email" id="prenumerationEmail" placeholder="Ange din epostadress" required><br>
         </form>
                
-                <button type="submit" class="submitButton" aria-label="subscribe">Spara</button>
-            
-        <p>Copyright 2020 Emma Lilja</p>
+                <button type="submit" class="submitButton" aria-label="subscribe">Ja tack till nyhetsbrev</button>
+            </div> 
+
     </footer>
 
 
