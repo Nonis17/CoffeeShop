@@ -95,11 +95,12 @@ searchOutput.classList.add('search-result-active');
         let closeButton = document.querySelector('.x-button'); 
 
         closeButton.addEventListener('click', function(){
-        console.log("Clicked!")
 
         searchOutput.classList.remove('search-result-active');
-        
+      
         searchBox.value = defaultText; 
+
+  
 
         });
 

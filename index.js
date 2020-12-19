@@ -40,6 +40,7 @@ function cartNumbers(product) {
 
 //Function to see what item we have in cart 
 function setItems(product){
+    console.log("product "+product);
 let cartItems = localStorage.getItem('productsInCart');
 
 //Turns a JSON object to a JavaScript object:
@@ -97,6 +98,8 @@ let cartCost = localStorage.getItem("totalCost");
 if (cartItems && productContainer){
     productContainer.innerHTML = '';
 
+    
+
     Object.values(cartItems).map(item => {
         productContainer.innerHTML += `
       
@@ -140,7 +143,7 @@ let cartItems = localStorage.getItem("productsInCart");
 cartItems = JSON.parse(cartItems); 
 
 //IF we have something in local storage(cartItems):
-let productContainer = document.querySelector(".dropdown-content");
+let productContainer = document.querySelector(".fly-out-box");
 let cartCost = localStorage.getItem("totalCost");
 
 if (cartItems && productContainer){
@@ -148,6 +151,7 @@ if (cartItems && productContainer){
 
    Object.values(cartItems).map(item => {
        productContainer.innerHTML += `
+    
      <br>
        <div class="product-title">
        <img src="./pics/${item.tag}.jpg" height="60" width="100">
@@ -170,11 +174,13 @@ if (cartItems && productContainer){
    `
  var anchorTag = document.createElement('a');
  anchorTag.setAttribute('href','shoppingcart.html');
- anchorTag.classList.add('go-to-checkout');
  anchorTag.innerText = 'Go to checkout';
+ anchorTag.classList.add('go-to-checkout');
+ productContainer.appendChild(anchorTag);
 
-  productContainer.appendChild(anchorTag);
-   
+
+
+
    ;
 }
 

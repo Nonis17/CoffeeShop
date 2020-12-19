@@ -3,7 +3,7 @@ let products = [
     {
         name: "Arabic Coffee",
     
-        tag: "arabic",
+        tag: "arabiccoffee",
         price: 89,
         inCart: 0
     },
@@ -16,8 +16,7 @@ let products = [
     },
     {
         name: "Africa Coffee",
-      
-        tag: "africa",
+        tag: "africanbeans",
         price: 79,
         inCart: 0
     },
